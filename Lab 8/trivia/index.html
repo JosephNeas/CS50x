@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            function correct(event)
+            {
+                let correct = event.target;
+                correct.style.backgroundColor = 'green';
+                document.querySelector("#MC").innerHTML = "Correct!";
+            };
+
+            function incorrect(event)
+            {
+                let incorrect = event.target;
+                incorrect.style.backgroundColor = 'red';
+                document.querySelector("#MC").innerHTML = "Incorrect!";
+            };
+
+            // function free_response()
+            // {
+            //     let free = document.querySelector('#FreeResponse').value;
+            //     free = free.toLowerCase();
+            //     if (free.contains ("rocket league"))
+            //     {
+            //         document.querySelector('#Submit').style.backgroundColor = 'green'
+            //         document.querySelector("#FR").innerHTML = "Correct!";
+            //     }
+            //     else
+            //     {
+            //         document.querySelector('#Submit').style.backgroundColor = 'red';
+            //         document.querySelector("#FR").innerHTML = "Incorrect!";
+            //     }
+            // };
+        </script>
+
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                    <h3>
+                        What state has the biggest population?
+                    </h3>
+                    <p id= "MC"> </p>
+
+                    <button id="Texas" onclick="incorrect(event);">Texas</button>
+                    <button id="Correct" onclick="correct(event);">California</button>
+                    <button id="New York" onclick="incorrect(event);">New York</button>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>
+                    What popular game is centered around car soccer?
+                </h3>
+                <p id = "FR"> </p>
+                <input autocomplete="off" autofocus id="FreeResponse" type="text">
+                <button id="Submit"> Submit </button>
+
+                <script>
+                    document.querySelector('#Submit').addEventListener('click', function()
+                    {
+                        let free = document.querySelector('#FreeResponse').value;
+                        free = free.toLowerCase();
+                        if (free == "rocket league")
+                        {
+                            document.querySelector('#Submit').style.backgroundColor = 'green'
+                            document.querySelector("#FR").innerHTML = "Correct!";
+                        }
+                        else
+                        {
+                            document.querySelector('#Submit').style.backgroundColor = 'red';
+                            document.querySelector("#FR").innerHTML = "Incorrect!";
+                        }
+                    });
+                </script>
+            </div>
+        </div>
+    </body>
+</html>

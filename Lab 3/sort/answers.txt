@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: I know sort 1 is bubble sort because when looking at the reveresed txts bubble sort takes the longest because if has to rearragnge the entire txt one number at a time
+
+sort2 uses: Merge Sort
+
+How do you know?: I know sort2 is merge sort because it is across the board the fastest sort with most files but especailly with the random txts
+
+sort3 uses: Selection sort
+
+How do you know?: I know sort3 is selection sort because it is slower than both other sorts when looking at the sorted txt files hence meaning it its iterating over each number despite being already sorted
