@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <div class="section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Shares ('-' = sold)</th>
+                        <th>Value Bought/Sold</th>
+                        <th>Time of transaction</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for transaction in transactions %}
+                        <tr>
+                            <td>{{ transaction["symbol"] }}</td>
+                            <td>{{ transaction["shares"] }}</td>
+                            <td>{{ transaction["price_paid"] }}</td>
+                            <td>{{ transaction["time"] }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

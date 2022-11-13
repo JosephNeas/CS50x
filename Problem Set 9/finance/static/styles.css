@@ -1,0 +1,87 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: 200%;
+    font-family: monospace;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+.section {
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+    font-family: monospace;
+}
+
+.section:hover {
+    background-color: #f5f5f5;
+    transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
+    font-family: monospace;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    width: 90%;
+    font-family: monospace;
+}
+
+table {
+    background-color: transparent;
+    font-family: monospace;
+    margin-bottom: 1rem;
+    width: 88%;
+
+}
+
+table th,
+table td {
+    padding: 0.75rem;
+    vertical-align: middle;
+}
+
+tbody tr:nth-of-type(odd) {
+    background-color: rgb(0, 75, 75, 0.3)
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: rgb(94, 212, 78, 0.3)
+}
+
+
+td.span
+{
+    background-color: rgb(255, 255, 255)
+}
+
+td.border
+{
+    border: solid black;
+    background-color: rgb(255, 255, 255)
+}
+
+nav .nav-item
+{
+    font-family: monospace;
+}

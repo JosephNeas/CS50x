@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <div class="section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Shares</th>
+                        <th>Current Price</th>
+                        <th>Total Value</th>
+                        <th>Cash</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+
+                    {% for users in user %}
+                        <tr>
+                            <td>{{ users["symbol"] }}</td>
+                            <td>{{ users["shares"] }}</td>
+                            <td>{{ users["current"] }}</td>
+                            <td>{{ users["price"] }}</td>
+                        </tr>
+                    {% endfor %}
+                    <tr>
+                        <td class="span" colspan="4"></td>
+                        <td class="border">{{ cash }}</td>
+                        <td class="border">{{ total }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

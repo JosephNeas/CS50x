@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>You Decide!</title>
+        <script>
+            function correct(event)
+            {
+                let correct = event.target;
+                correct.style.backgroundColor = 'green';
+                document.querySelector("#MC").innerHTML = "Correct!";
+            };
+
+            function incorrect(event)
+            {
+                let incorrect = event.target;
+                incorrect.style.backgroundColor = 'red';
+                document.querySelector("#MC").innerHTML = "Incorrect!";
+            };
+        </script>
+
+
+        <nav class="navbar shadow-lg p-3 mb-5 bg-white rounded">
+            <h3>Homepage Assignment</h3>
+            <ul class="nav nav-pills justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="Second page.html">Dogs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Third page.html">Cats</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Fourth page.html">Me?</a>
+                </li>
+            </ul>
+        </nav>
+    </head>
+    <body class="body">
+        <h2 class="headers" style="padding-top: 15px; padding-bottom: 15px;">
+            Can you tell what kind of person I am?
+        </h2>
+
+        <div class="container paragraphs">
+            <div class="section">
+                <p id= "MC"> </p>
+                <button id="Dog" onclick="correct(event);">Dog person</button>
+                <button id="Cat" onclick="incorrect(event);">Cat person</button>
+            </div>
+        </div>
+        <div class="row justify-content-between">
+            <div class="col-4">
+                <img src="puppy eyes.jpg" class="w3-round" alt="puppy eyes" height="400">
+            </div>
+            <div class="col-4">
+                <img src="cat eyes.jpg" class="w3-round" alt="cat eyes" height="400">
+            </div>
+        </div>
+    </body>
+</html>
