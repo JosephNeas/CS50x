@@ -1,0 +1,3 @@
+# Brewery Finder
+#### Video Demo: https://youtu.be/1JzsBb3BXkk
+#### Description: For my project, I made a website that would allow users to log in to search breweries by name and add them to their favorites. In the search tab of my website, there are two input boxes that ask the user to input a name of a brewery they would like to search for and another box to declare how many results they would like to receive. From the results, the user can then favorite a particular brewery they want which will then be displayed on their index page.

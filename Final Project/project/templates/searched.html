@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Searched
+{% endblock %}
+
+{% block main %}
+    <h2>Breweries we found matching that name</h2>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Brewery Name</th>
+                    <th>Brewery Type</th>
+                    <th>City</th>
+                    <th>State</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for name in names %}
+                    <tr>
+                        <td>{{ name["name"] }}</td>
+                        <td>{{ name["brewery_type"] }}</td>
+                        <td>{{ name["city"] }}</td>
+                        <td>{{ name["state"] }}</td>
+                        <td>
+                            <form action="/favorite" method="post">
+                                <input name="id" type="hidden" value="{{ name.user_id }}">
+                                <input name="name" type="hidden" value="{{ name.name }}">
+                                <input name="brewery_id" type="hidden" value="{{ name.brewery_id }}">
+                                <input name="type" type="hidden" value="{{ name.brewery_type }}">
+                                <input name="city" type="hidden" value="{{ name.city }}">
+                                <input name="state" type="hidden" value="{{ name.state }}">
+                                <input type="submit" value="Favorite">
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

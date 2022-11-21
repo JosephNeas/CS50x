@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+<style>
+    body {
+      background-image: url('https://www.tastingtable.com/img/gallery/the-10-best-drinks-to-mix-with-beer/l-intro-1662067134.jpg');
+      background-repeat: repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+</style>
+    <h3 style="color: #FFFFFF">Make an account with <span style="color: #FBB117">Brewery</span> Finder!</h3>
+    <p style="padding-bottom: .5%; color: #FFFFFF">Please enter the details below!</p>
+        <form action="/register" method="post">
+            <div class="mb-3">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="username" placeholder="Username" type="text">
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-auto" name="password" placeholder="Password" type="text">
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-auto" name="confirmation" placeholder="Confirm Password" type="text">
+            </div>
+            <button class="btn btn-primary" type="submit">Register</button>
+        </form>
+    </div>
+{% endblock %}

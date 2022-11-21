@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+<style>
+    body {
+      background-image: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/friends-toasting-with-beer-glasses-in-the-royalty-free-image-1637621142.jpg?crop=1.00xw:0.752xh;0,0.132xh&resize=1200:*');
+      background-repeat: repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+</style>
+<div style="padding-top: 8%">
+    <form action="/login" method="post">
+        <h3>Hi welcome to <span style="color: #FFFFFF">Brewery</span> Finder!</h3>
+        <p style="padding-bottom: .5%">Please login in order to save your favorite breweries near you</p>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Log In</button>
+    </form>
+</div>
+{% endblock %}

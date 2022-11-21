@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Random Brewery
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <div class="section">
+            <h3>Here is your random brewery!</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Brewery Name</th>
+                        <th>Brewery Type</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ names["name"] }}</td>
+                        <td>{{ names["type"] }}</td>
+                        <td>{{ names["city"] }}</td>
+                        <td>{{ names["state"] }}</td>
+                        <td>
+                            <form action="/favorite" method="post">
+                                <input name="id" type="hidden" value="{{ names.user_id }}">
+                                <input name="name" type="hidden" value="{{ names.name }}">
+                                <input name="brewery_id" type="hidden" value="{{ names.brewery_id }}">
+                                <input name="type" type="hidden" value="{{ names.brewery_type }}">
+                                <input name="city" type="hidden" value="{{ names.city }}">
+                                <input name="state" type="hidden" value="{{ names.state }}">
+                                <input type="submit" value="Favorite">
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
